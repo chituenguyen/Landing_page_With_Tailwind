@@ -11,9 +11,13 @@
     .h-custom{
     height:620px
     }
-    .b-custom{
+    .b-custom1{
         @apply
         mx-4 bg-red-500 border-2 px-10 py-3 rounded-full hover:bg-transparent text-white transition-all duration-75 ease-in
+    }
+    .b-custom2{
+        @apply
+        mx-4 bg-transparent border-2 px-10 py-3 rounded-full hover:bg-red-500 transition-all duration-75 ease-in
     }
 }
 

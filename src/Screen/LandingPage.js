@@ -18,7 +18,7 @@ function LandingPage() {
             </div>
             {/* links */}
             <ul
-              className=" fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-gray-900 bg-opacity-70 
+              className=" invisible fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-gray-900 bg-opacity-70 
             md:bg-transparent
             md:h-auto
             md:static
@@ -87,123 +87,154 @@ function LandingPage() {
             </p>
             {/* Button */}
             <div className="flex justify-center">
-              <button className="b-custom">Playstore</button>
-              <button className="b-custom">Appstore</button>
+              <button className="b-custom1">Playstore</button>
+              <button className="b-custom2">Appstore</button>
             </div>
           </div>
         </div>
       </section>
       {/* ==========App image========== */}
-      <section>
-        <div>
-          <img src="https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/app-img.png"></img>
+      <section className="relative">
+        {/* ===Image===*/}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-2/3 -translate-y-1/4">
+          <img src="https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/app-img.png"
+          className="max-w-none w-screen pl-20 md:w-auto md:max-w-none"></img>
         </div>
       </section>
       {/* =========App steps=========== */}
-      <section>
+      <section className="pt-96 mt-28">
         {/* Container */}
-        <div>
-          <hr></hr>
+        <div className="container mx-auto px-4">
+          <hr className="w-4/5 mx-auto h-0.5 bg-gray-200 md:w-2/5"></hr>
           {/* Title */}
-          <h2>How the app works</h2>
+          <h2 className="text-center text-4xl font-semibold py-10">How the app works</h2>
           {/* step1 */}
-          <div>
-            <div>
+          <div className="flex flex-col justify-evenly items-center md:flex-row">
+            <div className="text-center mb-10">
               <img src="https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/app-1.png"></img>
             </div>
-            <div>
-              <span>Create an account</span>
-              <h2>Create/Login to an existing account to get started</h2>
-              <p>An account is created with your email and desired password</p>
+            {/* text*/}
+            <div className="text-center mx-auto">
+              <span className="text-2xl text-red-500 font-semibold ">Create an account</span>
+              <h2 className="text-4xl text-blue-900 font-bold max-w-md leading-relaxed py-5">Create/Login to an existing account to get started</h2>
+              <p className="text-3xl text-gray-500 max-w-md leading-relaxed">An account is created with your email and desired password</p>
             </div>
           </div>
+          <hr className="w-4/5 mx-auto h-0.5 bg-gray-200 md:w-2/5"></hr>
           {/* step2 */}
-          <div>
-            <div>
-              <span>Create an account</span>
-              <h2>Create/Login to an existing account to get started</h2>
-              <p>An account is created with your email and desired password</p>
+          <div className="flex flex-col justify-evenly items-center md:flex-row">
+            <div className="text-center mx-auto">
+              <span className="text-2xl text-red-500 font-semibold ">Explore while shopping</span>
+              <h2 className="text-4xl text-blue-900 font-bold max-w-md leading-relaxed py-5">Shop for your favorites meal as a dey hot</h2>
+              <p className="text-3xl text-gray-500 max-w-md leading-relaxed">Shop for your favorites meals or drinks and enjoy while doing it</p>
             </div>
-            <div>
+            <div className="text-center mb-10">
               <img src="https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/app-2.png"></img>
             </div>
           </div>
           {/* step3 */}
-          <div>
-            <div>
+          <hr className="w-4/5 mx-auto h-0.5 bg-gray-200 md:w-2/5"></hr>
+          <div className="flex flex-col justify-evenly items-center md:flex-row">
+            <div className="text-center mb-10">
               <img src="https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/app-3.png"></img>
             </div>
-            <div>
-              <span>Create an account</span>
-              <h2>Create/Login to an existing account to get started</h2>
-              <p>An account is created with your email and desired password</p>
+            <div className="text-center mx-auto">
+              <span className="text-2xl text-red-500 font-semibold ">Checkout</span>
+              <h2 className="text-4xl text-blue-900 font-bold max-w-md leading-relaxed py-5">When you done check out and get it delivered</h2>
+              <p className="text-3xl text-gray-500 max-w-md leading-relaxed">When you done check out and get it delivered with ease</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* =========Download============ */}
-      <section>
-        <div>
-          <div>
-            <h1> Dowload the app now</h1>
-            <p>
+      <section className="flex flex-col justify-center items-center w-full h-custom" style={{
+        backgroundColor: '#252B42',
+      }}> 
+          <div className="text-center">
+            <h1 className=" text-4xl
+              mb-5
+              font-bold
+              max-w-2xl
+              md:leading-relaxed md:text-5xl
+              text-white"> Dowload the app now</h1>
+            <p className="text-2xl max-w-1">
               Available on your favorite store. Start your premium experience
               now
             </p>
-            <div>
-              <button>Playstore</button>
-              <button>Appstore</button>
+            <div className="mt-10">
+              <button className="b-custom1">Buy now</button>
+              <button className="b-custom2">Try for free</button>
             </div>
           </div>
-        </div>
       </section>
 
       {/* =========Footer============= */}
-      <section>
-        <div>
-          <div>
-            <img src="https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/logo.png"></img>
+      <footer>
+      {/* <!-- container --> */}
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col justify-between items-center py-5 md:flex-row"
+        >
+          {/* <!-- logo --> */}
+          <div class="w-32 md:w-full">
+            <img src="https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/logo.png" alt="website logo" />
           </div>
-          <div>
-            <a href="tel:90871587"></a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
-            </svg>
-            <p>90-123-567</p>
-            <a href="maito:info@gmail.com"></a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-            <p>info@gmail.com</p>
+          {/* <!-- contact --> */}
+          <div
+            class="
+              flex
+              items-center
+              mt-5
+              text-gray-500
+              w-full
+              justify-center
+              md:justify-end
+            "
+          >
+            {/* <!-- phone --> */}
+            <a href="tel:901234567" class="flex mx-4">
+              {/* <!-- icon --> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-red-500 mr-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                />
+              </svg>
+              {/* <!-- number --> */}
+              <p>90-123-4567</p>
+            </a>
+            {/* <!-- email --> */}
+            <a href="mailto:info@me.com" class="flex mx-4">
+              {/* <!-- icon --> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-red-500 mr-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                />
+                <path
+                  d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                />
+              </svg>
+              {/* <!-- address --> */}
+              <p>info@me.com</p>
+            </a>
           </div>
-          <div>
-            <p>Copy &copy;2021 Bella onoje</p>
-          </div>
+         </div>
+        {/* <!-- copy --> */} 
+        <div class="text-center my-4">
+          <p class="text-gray-500">Copy &copy; 2021 Bella Onojie</p>
         </div>
-      </section>
+      </div>
+    </footer>
     </>
   );
 }
