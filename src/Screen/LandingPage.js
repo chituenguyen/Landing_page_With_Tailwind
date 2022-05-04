@@ -1,37 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 
 function LandingPage() {
+  // const [hidden,setHidden] =useState([0])
   return (
     <>
       {/* ===========header============== */}
       <header>
         {/* ===========container=========== */}
-        <div>
-          <nav>
+        <div className="container mx-auto px-4">
+          <nav className="flex justify-between items-center py-5">
             {/* logo */}
-            <div>
+            <div className="w-32 md:w-full z-20">
               <img
                 src="https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/logo.png"
                 alt="Logo"
               ></img>
             </div>
             {/* links */}
-            <ul>
-              <li>
-                <a href="#">Home</a>
+            <ul
+              className=" fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-gray-900 bg-opacity-70 
+            md:bg-transparent
+            md:h-auto
+            md:static
+            md:flex-row
+            md:justify-between
+            md:visible"
+            >
+              <li className="m-12 md:m-0">
+                <a href="#" className="c-link">
+                  Home
+                </a>
               </li>
-              <li>
-                <a href="#">Product</a>
+              <li className="m-12 md:m-0">
+                <a href="#" className="c-link">
+                  Product
+                </a>
               </li>
-              <li>
-                <a href="#">FAQ</a>
+              <li className="m-12 md:m-0">
+                <a href="#" className="c-link">
+                  FAQ
+                </a>
               </li>
-              <li>
-                <a href="#">Contact</a>
+              <li className="m-12 md:m-0">
+                <a href="#" className="c-link">
+                  Contact
+                </a>
               </li>
             </ul>
             {/* menu button */}
-            <div>
+            <div className="md:invisible">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -52,20 +69,27 @@ function LandingPage() {
       {/* ===========Bannner============= */}
       <section>
         <div
+          className="w-full bg-no-repeat bg-cover relative h-custom"
           style={{
             backgroundImage: `url("https://raw.githubusercontent.com/PASSIONCORNERS/tailwind_vn/main/public/img/banner.png")`,
           }}
         >
-          <div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-center">
             {/* Tag */}
-            <p>Food app</p>
+            <p className="text-xl mb-5">Food app</p>
             {/* Title */}
-            <h1>Why stay hungry when you can order from Bella Onoje</h1>
+            <h1 className="text-4xl mb-5 font-bold md:leading-relaxed md:text-5xl">
+              Why stay hungry when you can order from Bella Onoje
+            </h1>
             {/* Description */}
-            <p>Download the bella onoje's food app now</p>
+            <p className="text-xl mb-5 font-light-300">
+              Download the bella onoje's food app now
+            </p>
             {/* Button */}
-            <button>Playstore</button>
-            <button>Appstore</button>
+            <div className="flex justify-center">
+              <button className="b-custom">Playstore</button>
+              <button className="b-custom">Appstore</button>
+            </div>
           </div>
         </div>
       </section>
@@ -173,6 +197,10 @@ function LandingPage() {
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
+            <p>info@gmail.com</p>
+          </div>
+          <div>
+            <p>Copy &copy;2021 Bella onoje</p>
           </div>
         </div>
       </section>

@@ -952,4 +952,9 @@ module.exports = {
     'disabled',
   ],
   plugins: [],
+  extends:{
+    height:{
+      custom:"620px"
+    }
+  },
 }

@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .c-link{
+    @apply
+    text-white md:text-black hover:text-red-500 transition duration-200 ease-in
+    
+}
+    .h-custom{
+    height:620px
+    }
+    .b-custom{
+        @apply
+        mx-4 bg-red-500 border-2 px-10 py-3 rounded-full hover:bg-transparent text-white transition-all duration-75 ease-in
+    }
+}
+
+
+
